@@ -41,7 +41,7 @@ def scrape_table(url):
     rutd_header = headers[2].text.strip()
     print(f"{player_header:<20} - Position{'':<10} - Team{'':<10} - {rutd_header}(Rushing Touchdowns){'':<10}")
 
-    # Pulls info from cells and formats it.
+    # Pulls info from cells and formats it to print top 20 players.
     for row in rows[:21]:
         cells = row.find_all('td')
         if not cells:
